@@ -1,5 +1,6 @@
 package com.example.venturuscatviewer.view;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.ViewModelProvider;
@@ -27,13 +28,19 @@ public class MainActivity extends AppCompatActivity {
 
     private ImageAdapter imageAdapter;
 
+    ActionBar actionBar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         activityMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
         activityMainBinding.getRoot();
         activityMainBinding.setLifecycleOwner(this);
+        this.actionBar = this.getSupportActionBar();
+        this.actionBar.setTitle(R.string.main_activity_title);
 
+
+        imageList.clear();
         mainActivityViewModel = new ViewModelProvider(this).get(MainActivityViewModel.class);
         imageAdapter = new ImageAdapter(imageList);
 
@@ -49,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
                 imageList.addAll(images);
                 imageAdapter.notifyDataSetChanged();
             } else {
-                Toast.makeText(this, "Não foi possível conectar ao servidor de informações!", Toast.LENGTH_SHORT);
+                Toast.makeText(this, "Não foi possível conectar ao servidor de informações!", Toast.LENGTH_SHORT).show();
             }
         });
     }
