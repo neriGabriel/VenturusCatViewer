@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">VenturusCatViewer</string>
+    <string name="cat_image_content">A cat image from IMGUR api</string>
 </resources>
