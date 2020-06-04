@@ -16,6 +16,7 @@ import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers;
 import io.reactivex.rxjava3.schedulers.Schedulers;
 
 public class MainActivityViewModel extends ViewModel {
+
     private MutableLiveData<List<ImageRequest>> listMutableLiveData = new MutableLiveData<>();
 
     @Inject

@@ -28,11 +28,13 @@ public class ImageUtil {
                 .priority(Priority.HIGH)
                 .dontAnimate()
                 .dontTransform()
+
                 .centerCrop();
 
         Glide.with(image.getContext())
                 .setDefaultRequestOptions(requestOptions)
                 .load(url)
+                .thumbnail( 0.5f )
                 .into(image);
     }
 }

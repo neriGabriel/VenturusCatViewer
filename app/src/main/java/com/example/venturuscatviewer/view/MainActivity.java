@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
     private ImageAdapter imageAdapter;
 
-    ActionBar actionBar;
+    private ActionBar actionBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

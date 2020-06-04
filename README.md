@@ -1,15 +1,17 @@
 # Venturus cat viewer
 
 A simple Android app that make a fetch in imgur (cats section) api and show the images in gallery.
+
+#### Translate
 Um aplicativo android simples que faz uma busca na api do imgur (seção de gatos) e exibe as imagens retornadas em uma galeria.
 
 ## Getting Started
   - Clone this repository.
   - Open in your IDE.
-  - Await gradle sync.
+  - Wait gradle sync.
   - Be happy \o/.
 
-### Prerequisites
+### Pre-requisites
   - Android sdk installed.
   - Android tools installed.
   - An real/virtual device to run the app.
