@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.os.Bundle;
 import android.widget.Toast;
@@ -56,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
                 imageList.addAll(images);
                 imageAdapter.notifyDataSetChanged();
             } else {
-                Toast.makeText(this, "Não foi possível conectar ao servidor de informações!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, R.string.error_network_message, Toast.LENGTH_SHORT).show();
             }
         });
     }

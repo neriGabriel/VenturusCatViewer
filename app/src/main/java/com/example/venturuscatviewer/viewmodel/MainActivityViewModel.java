@@ -24,15 +24,12 @@ import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers;
 import io.reactivex.rxjava3.schedulers.Schedulers;
 
 public class MainActivityViewModel extends ViewModel {
-
-    //private final RetrofitConfig retrofitConfig;
     private MutableLiveData<List<ImageRequest>> listMutableLiveData = new MutableLiveData<>();
 
     @Inject
     public DataRequestApi dataRequestApi;
 
     public MainActivityViewModel() {
-        //this.retrofitConfig = new RetrofitConfig();
         DaggerRetrofitComponent.create().inject(this);
     }
 
