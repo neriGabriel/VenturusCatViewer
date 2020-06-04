@@ -44,22 +44,20 @@ public class MainActivity extends AppCompatActivity {
         mainActivityViewModel = new ViewModelProvider(this).get(MainActivityViewModel.class);
         imageAdapter = new ImageAdapter(imageList);
 
-        imageList.clear();
         activityMainBinding.recyclerView.setLayoutManager(new GridLayoutManager(this, 4));
         activityMainBinding.recyclerView.setAdapter(imageAdapter);
 
-        activityMainBinding.swipeRefresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
-            @Override
-            public void onRefresh() {
-                activityMainBinding.swipeRefresh.setRefreshing(false);
-                getApiInfo();
-            }
+        activityMainBinding.swipeRefresh.setOnRefreshListener(() -> {
+            getApiInfo();
+            activityMainBinding.swipeRefresh.setRefreshing(false);
         });
 
         getApiInfo();
     }
 
     private void getApiInfo() {
+        imageList.clear();
+        imageAdapter.notifyDataSetChanged();
         mainActivityViewModel.getApiInfo().observe(activityMainBinding.getLifecycleOwner(), images -> {
             if(images != null) {
                 imageList.addAll(images);

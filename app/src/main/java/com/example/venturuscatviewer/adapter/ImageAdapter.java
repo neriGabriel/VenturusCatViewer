@@ -16,7 +16,7 @@ import java.util.List;
 
 public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageAdapterViewHolder>{
 
-    private List<ImageRequest> imageList;
+    public List<ImageRequest> imageList;
 
     public ImageAdapter(List<ImageRequest> imageList) {
         this.imageList = imageList;

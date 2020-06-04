@@ -28,7 +28,7 @@ public class ImageUtil {
                 .priority(Priority.HIGH)
                 .dontAnimate()
                 .dontTransform()
-                .fitCenter();
+                .centerCrop();
 
         Glide.with(image.getContext())
                 .setDefaultRequestOptions(requestOptions)
