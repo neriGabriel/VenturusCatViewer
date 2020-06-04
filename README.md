@@ -29,7 +29,7 @@ Um aplicativo android simples que faz uma busca na api do imgur (seção de gato
   ![alt tag](./prints/print4.png)
 
 ## Author
-  - Gabriel Neri
+  - [Gabriel Neri](https://br.linkedin.com/in/nerigabriel)
 
 ## License
    - This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details  
