@@ -35,8 +35,8 @@ public class MainActivity extends AppCompatActivity {
         activityMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
         activityMainBinding.getRoot();
         activityMainBinding.setLifecycleOwner(this);
-        this.actionBar = this.getSupportActionBar();
-        this.actionBar.setTitle(R.string.main_activity_title);
+        actionBar = this.getSupportActionBar();
+        actionBar.setTitle(R.string.main_activity_title);
 
 
         imageList.clear();
@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         activityMainBinding.recyclerView.setLayoutManager(new GridLayoutManager(this, 4));
         activityMainBinding.recyclerView.setAdapter(imageAdapter);
 
-        this.getApiInfo();
+        getApiInfo();
     }
 
     private void getApiInfo() {

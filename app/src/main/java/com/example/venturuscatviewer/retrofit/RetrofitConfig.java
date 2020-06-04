@@ -6,6 +6,9 @@ import okhttp3.Request;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
+/*
+* Deprecated, now the project is setup to use depedency injection \o/
+* */
 public class RetrofitConfig {
 
     private final Retrofit config;
@@ -26,7 +29,6 @@ public class RetrofitConfig {
 
     /*
     * Setup http request configs
-    * @todo => final variavel to id
     * */
     private OkHttpClient createHttpCliente() {
         return new OkHttpClient.Builder()

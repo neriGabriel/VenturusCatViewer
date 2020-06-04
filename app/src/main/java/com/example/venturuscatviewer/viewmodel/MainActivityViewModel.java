@@ -36,18 +36,18 @@ public class MainActivityViewModel extends ViewModel {
     public MutableLiveData<List<ImageRequest>> getApiInfo() {
 
         if(this.listMutableLiveData.getValue() == null) {
-            this.dataRequestApi.getApiInfo("cats")
+            dataRequestApi.getApiInfo("cats")
                                .subscribeOn(Schedulers.newThread())
                                .observeOn(AndroidSchedulers.mainThread())
                                .subscribe(data -> {
                                    for(CatRequest catRequest : data.getCatRequestList()) {
-                                       this.listMutableLiveData.setValue(catRequest.getImageRequestList());
+                                       listMutableLiveData.setValue(catRequest.getImageRequestList());
                                    }
                                }, Throwable -> {
-                                   this.listMutableLiveData.setValue(null);
+                                   listMutableLiveData.setValue(null);
                                });
         }
 
-        return this.listMutableLiveData;
+        return listMutableLiveData;
     }
 }

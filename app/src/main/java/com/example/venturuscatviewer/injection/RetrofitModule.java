@@ -14,6 +14,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class RetrofitModule {
 
     private final String baseUrl = "https://api.imgur.com/3/gallery/";
+    private final String authorization = "Client-ID 1ceddedc03a5d71";
 
     @Provides
     public DataRequestApi getRetrofitConfig() {
@@ -30,7 +31,7 @@ public class RetrofitModule {
         return new OkHttpClient.Builder()
                 .addInterceptor(chain -> {
                     Request.Builder onGoing = chain.request().newBuilder();
-                    onGoing.addHeader("Authorization", "Client-ID 1ceddedc03a5d71");
+                    onGoing.addHeader("Authorization", authorization);
                     return chain.proceed(onGoing.build());
                 })
                 .build();
