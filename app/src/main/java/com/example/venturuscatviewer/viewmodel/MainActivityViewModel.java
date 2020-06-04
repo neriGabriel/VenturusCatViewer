@@ -1,12 +1,5 @@
 package com.example.venturuscatviewer.viewmodel;
 
-import android.app.Application;
-import android.media.Image;
-import android.util.Log;
-import android.widget.Toast;
-
-import androidx.annotation.NonNull;
-import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
@@ -14,7 +7,6 @@ import com.example.venturuscatviewer.injection.DaggerRetrofitComponent;
 import com.example.venturuscatviewer.model.CatRequest;
 import com.example.venturuscatviewer.model.ImageRequest;
 import com.example.venturuscatviewer.retrofit.DataRequestApi;
-import com.example.venturuscatviewer.retrofit.RetrofitConfig;
 
 import java.util.List;
 
@@ -34,19 +26,17 @@ public class MainActivityViewModel extends ViewModel {
     }
 
     public MutableLiveData<List<ImageRequest>> getApiInfo() {
-
-        if(this.listMutableLiveData.getValue() == null) {
-            dataRequestApi.getApiInfo("cats")
-                               .subscribeOn(Schedulers.newThread())
-                               .observeOn(AndroidSchedulers.mainThread())
-                               .subscribe(data -> {
-                                   for(CatRequest catRequest : data.getCatRequestList()) {
-                                       listMutableLiveData.setValue(catRequest.getImageRequestList());
-                                   }
-                               }, Throwable -> {
-                                   listMutableLiveData.setValue(null);
-                               });
-        }
+        listMutableLiveData =  new MutableLiveData<>();
+        dataRequestApi.getApiInfo("cats")
+                .subscribeOn(Schedulers.newThread())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(data -> {
+                    for (CatRequest catRequest : data.getCatRequestList()) {
+                        listMutableLiveData.setValue(catRequest.getImageRequestList());
+                    }
+                }, Throwable -> {
+                    listMutableLiveData.setValue(null);
+                });
 
         return listMutableLiveData;
     }

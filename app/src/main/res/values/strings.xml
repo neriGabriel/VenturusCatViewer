@@ -3,4 +3,5 @@
     <string name="cat_image_content">A cat image from IMGUR api</string>
     <string name="main_activity_title">Venturus cat viewer</string>
     <string name="error_network_message">Não foi possível conectar ao servidor de informações!</string>
+    <string name="error_network_image">error_network_image</string>
 </resources>
