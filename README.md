@@ -37,7 +37,7 @@ Um aplicativo android simples que faz uma busca na api do imgur (seção de gato
 
 <a name="appPrints"/></a>
 ### App prints
-  ![alt tag](./prints/print1.png){ width: 200px; }
+  ![alt tag](./prints/print1.png){:height="250px" width="250px"}
   ![alt tag](./prints/print2.png){ width: 200px; }
   ![alt tag](./prints/print3.png){ width: 200px; }
   ![alt tag](./prints/print4.png){ width: 200px; }
