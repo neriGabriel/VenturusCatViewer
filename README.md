@@ -1,21 +1,32 @@
-# Venturus cat viewer
+# Venturus Cat Viewer
 
 A simple Android app that make a fetch in imgur (cats section) api and show the images in gallery.
 
-#### Tradução
+### Tradução
 Um aplicativo android simples que faz uma busca na api do imgur (seção de gatos) e exibe as imagens retornadas em uma galeria.
 
+##### Table of Contents
+[Getting Started](#gettingStarted)
+[Pre-requisites] (#preRequisites)
+[Dependencies and Libraries](#dependenciesLibraries)
+[App prints](#appPrints)
+[Author](#author)
+
+
+<a name="gettingStarted"/>
 ## Getting Started
   - Clone this repository.
   - Open in your IDE.
   - Wait gradle sync.
   - Be happy \o/.
 
+<a name="preRequisites"/>
 ### Pre-requisites
   - Android sdk installed.
   - Android tools installed.
   - An real/virtual device to run the app.
 
+<a name="dependenciesLibraries"/>
 ### Dependencies and Libraries
   - Dagger    [2.28]    => current
   - Swiper    [1.0.0]   => current
@@ -24,12 +35,14 @@ Um aplicativo android simples que faz uma busca na api do imgur (seção de gato
   - Lifecycle [2.2.0]   => current
   - RxJava    [3.0.0]   => current
 
+<a name="appPrints"/>
 ### App prints
-  ![alt tag](./prints/print1.png)
-  ![alt tag](./prints/print2.png)
-  ![alt tag](./prints/print3.png)
-  ![alt tag](./prints/print4.png)
+  ![alt tag](./prints/print1.png =250x250)
+  ![alt tag](./prints/print2.png =250x250)
+  ![alt tag](./prints/print3.png =250x250)
+  ![alt tag](./prints/print4.png =250x250)
 
+<a name="author"/>
 ## Author
   - [Gabriel Neri](https://br.linkedin.com/in/nerigabriel)
 
