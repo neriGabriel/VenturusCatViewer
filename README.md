@@ -5,7 +5,7 @@ A simple Android app that make a fetch in imgur (cats section) api and show the 
 ### Tradução
 Um aplicativo android simples que faz uma busca na api do imgur (seção de gatos) e exibe as imagens retornadas em uma galeria.
 
-##### Table of Contents
+## Table of Contents
 1. [Getting Started](#gettingStarted)
 2. [Pre-requisites](#preRequisites)
 3. [Dependencies and Libraries](#dependenciesLibraries)
