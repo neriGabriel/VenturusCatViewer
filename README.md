@@ -7,7 +7,7 @@ Um aplicativo android simples que faz uma busca na api do imgur (seção de gato
 
 ##### Table of Contents
 1. [Getting Started](#gettingStarted)
-2. [Pre-requisites] (#preRequisites)
+2. [Pre-requisites](#preRequisites)
 3. [Dependencies and Libraries](#dependenciesLibraries)
 4. [App prints](#appPrints)
 5. [Author](#author)
@@ -37,10 +37,10 @@ Um aplicativo android simples que faz uma busca na api do imgur (seção de gato
 
 <a name="appPrints"/></a>
 ### App prints
-  ![alt tag](./prints/print1.png =250x250)
-  ![alt tag](./prints/print2.png =250x250)
-  ![alt tag](./prints/print3.png =250x250)
-  ![alt tag](./prints/print4.png =250x250)
+  ![alt tag](./prints/print1.png){ width: 200px; }
+  ![alt tag](./prints/print2.png){ width: 200px; }
+  ![alt tag](./prints/print3.png){ width: 200px; }
+  ![alt tag](./prints/print4.png){ width: 200px; }
 
 <a name="author"/></a>
 ## Author
