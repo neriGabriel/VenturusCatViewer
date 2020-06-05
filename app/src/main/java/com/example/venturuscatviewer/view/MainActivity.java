@@ -30,7 +30,6 @@ public class MainActivity extends AppCompatActivity {
 
     private ImageAdapter imageAdapter;
 
-    private ActionBar actionBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,8 +37,6 @@ public class MainActivity extends AppCompatActivity {
         activityMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
         activityMainBinding.getRoot();
         activityMainBinding.setLifecycleOwner(this);
-        actionBar = this.getSupportActionBar();
-        actionBar.setTitle(R.string.main_activity_title);
 
         mainActivityViewModel = new ViewModelProvider(this).get(MainActivityViewModel.class);
         imageAdapter = new ImageAdapter(imageList);
