@@ -11,6 +11,7 @@ import com.bumptech.glide.Priority;
 import com.bumptech.glide.load.DecodeFormat;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.RequestOptions;
+import com.example.venturuscatviewer.R;
 
 import java.util.Random;
 
@@ -30,6 +31,7 @@ public class ImageUtil {
                 .priority(Priority.IMMEDIATE)
                 .dontAnimate()
                 .dontTransform()
+                .error(R.drawable.network_cloud_connection_failed)
                 .encodeFormat(Bitmap.CompressFormat.PNG)
                 .format(DecodeFormat.DEFAULT)
                 .centerCrop();
