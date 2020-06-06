@@ -1,12 +1,14 @@
 package com.example.venturuscatviewer.util;
 
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.widget.ImageView;
 
 import androidx.swiperefreshlayout.widget.CircularProgressDrawable;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.Priority;
+import com.bumptech.glide.load.DecodeFormat;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.RequestOptions;
 
@@ -24,11 +26,12 @@ public class ImageUtil {
     public static void setImageView(String url, ImageView image) {
         RequestOptions requestOptions = new RequestOptions()
                 .placeholder(getProgressDrawable(image.getContext()))
-                .diskCacheStrategy(DiskCacheStrategy.ALL)
-                .priority(Priority.HIGH)
+                .diskCacheStrategy(DiskCacheStrategy.AUTOMATIC)
+                .priority(Priority.IMMEDIATE)
                 .dontAnimate()
                 .dontTransform()
-
+                .encodeFormat(Bitmap.CompressFormat.PNG)
+                .format(DecodeFormat.DEFAULT)
                 .centerCrop();
 
         Glide.with(image.getContext())
